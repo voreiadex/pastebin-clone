@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: pastebin-service
+    runtime: docker
+    build:
+      dockerfilePath: Dockerfile
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: DB_URL
+        fromDatabase:
+          name: pastebin-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: pastebin-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: pastebin-db
+          property: password
+
+databases:
+  - name: pastebin-db
+    plan: free
+    databaseName: pastebin
+    user: pastebin_user
