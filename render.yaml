@@ -7,15 +7,15 @@ services:
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
-      - key: DB_URL
+      - key: SPRING_DATASOURCE_URL
         fromDatabase:
           name: pastebin-db
           property: connectionString
-      - key: DB_USERNAME
+      - key: SPRING_DATASOURCE_USERNAME
         fromDatabase:
           name: pastebin-db
           property: user
-      - key: DB_PASSWORD
+      - key: SPRING_DATASOURCE_PASSWORD
         fromDatabase:
           name: pastebin-db
           property: password
