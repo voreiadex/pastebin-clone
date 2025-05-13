@@ -13,13 +13,17 @@ spring:
     resources:
       static-locations: classpath:/static/
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
-        temp:
-          use_jdbc_metadata_defaults: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 server:
   port: 8080
+logging:
+  level:
+    org.hibernate: DEBUG
+    org.springframework.jdbc: TRACE
