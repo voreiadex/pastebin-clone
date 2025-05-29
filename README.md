@@ -12,7 +12,6 @@ https://pastebin-clone-nk19.onrender.com
 
 База данных
 PostgreSQL на Neon.tech
-postgresql://user:pass@ep-sweet-bread-a8vahprh-pooler.eastus2.azure.neon.tech/neondb
 Используется обоими серверами.
 
 Мониторинг серверов
