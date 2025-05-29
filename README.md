@@ -15,12 +15,6 @@ PostgreSQL на Neon.tech
 postgresql://user:pass@ep-sweet-bread-a8vahprh-pooler.eastus2.azure.neon.tech/neondb
 Используется обоими серверами.
 
-flowchart TD
-    A[Пользователь] --> B[Cloudflare Worker LB]
-    B --> C[Сервер 1: Render]
-    B --> D[Сервер 2: Render]
-    C & D --> E[(БД: Neon.tech)]
-
 Мониторинг серверов
 https://stats.uptimerobot.com/XAOz63nwuc
 
